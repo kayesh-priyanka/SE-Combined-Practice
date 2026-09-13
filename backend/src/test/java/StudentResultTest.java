@@ -4,23 +4,31 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class StudentResultTest {
 
     @Test
-    void testPass() {
+    void testGradeA() {
         StudentResult result = new StudentResult();
 
-        assertEquals("Pass", result.getResult(75));
+        assertEquals("A", result.getGrade(75));
     }
 
     @Test
-    void testFail() {
+    void testGradeB() {
         StudentResult result = new StudentResult();
 
-        assertEquals("Fail", result.getResult(40));
+        assertEquals("B", result.getGrade(65));
     }
 
    @Test
-   void testExactly50() {
-    StudentResult result = new StudentResult();
+   void testGradeC() {
+        StudentResult result = new StudentResult();
 
-    assertEquals("Pass", result.getResult(50));
-}
-}
+        assertEquals("C", result.getGrade(55));
+    }
+  
+   @Test
+    void testGradeF() {
+        StudentResult result = new StudentResult();
+
+        assertEquals("F", result.getGrade(40));
+    }
+
+  }
