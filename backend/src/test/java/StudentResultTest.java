@@ -16,4 +16,11 @@ public class StudentResultTest {
 
         assertEquals("Fail", result.getResult(40));
     }
+
+   @Test
+   void testExactly50() {
+    StudentResult result = new StudentResult();
+
+    assertEquals("Pass", result.getResult(50));
+}
 }
